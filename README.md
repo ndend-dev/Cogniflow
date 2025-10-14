@@ -1,6 +1,3 @@
-Perfecto 😄☕ Aquí tienes un **README.md** completo y profesional para tu proyecto **CogniFlow**, incluyendo la explicación de instalación con React + Vite, configuración de la clave de Gemini API, y una sección para donaciones vía **Buy Me a Coffee**:
-
----
 
 ## ☕ Apóyame en mi café ☕
 
@@ -10,7 +7,6 @@ Si **CogniFlow** te gusta o te resulta útil, puedes invitarme un café para seg
 
 ---
 
-````markdown
 # 🧠 CogniFlow
 
 **CogniFlow** es una aplicación web moderna y minimalista para la **organización del conocimiento**, inspirada en Logseq y Obsidian.  
@@ -38,6 +34,7 @@ Permite crear **bloques temáticos**, **notas enlazadas**, **mapas mentales inte
 Sigue estos pasos para instalar **CogniFlow** en tu entorno local:
 
 ### 1️⃣ Clona el repositorio
+
 ```bash
 git clone https://github.com/tuusuario/cogniflow.git
 cd cogniflow
