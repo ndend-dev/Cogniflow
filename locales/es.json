@@ -1,0 +1,112 @@
+{
+  "app": {
+    "title": "CogniFlow",
+    "subtitle": "Tu Centro de Conocimiento AI",
+    "noNoteSelected": "Ninguna Nota Seleccionada",
+    "noNoteSelectedHint": "Selecciona una nota de la barra lateral o crea una nueva para comenzar.",
+    "noBlockSelected": "¡Bienvenido a CogniFlow!",
+    "noBlockSelectedHint": "Crea tu primer bloque para empezar a organizar tu conocimiento.",
+    "noteNotFound": "No se encontró la nota titulada '{noteTitle}'.",
+    "flashcardAdded": "¡Tarjeta de estudio añadida con éxito!"
+  },
+  "sidebar": {
+    "newBlock": "Nuevo Bloque",
+    "newNote": "Nueva Nota",
+    "filterPlaceholder": "Filtrar notas y bloques..."
+  },
+  "noteEditor": {
+    "summarizeAI": "Resumen IA",
+    "generateAI": "Generar con IA",
+    "viewEdit": "Vista de Edición",
+    "viewSplit": "Vista Dividida",
+    "viewPreview": "Previsualizar",
+    "titlePlaceholder": "Nota sin Título",
+    "contentPlaceholder": "Empieza a escribir tus ideas...",
+    "generating": "Generando...",
+    "generateContentTitleMissing": "Por favor, proporciona un título o tema para generar el contenido.",
+    "toolbar": {
+      "bold": "Negrita",
+      "italic": "Cursiva",
+      "strikethrough": "Tachado",
+      "heading": "Encabezado",
+      "unorderedList": "Lista con viñetas",
+      "orderedList": "Lista numerada",
+      "checklist": "Lista de tareas",
+      "quote": "Cita",
+      "code": "Código",
+      "link": "Enlace",
+      "image": "Imagen",
+      "insertTable": "Insertar tabla de {rows}x{cols}",
+      "horizontalRule": "Línea horizontal"
+    }
+  },
+  "flashcardView": {
+    "noFlashcards": "No Hay Tarjetas Disponibles",
+    "noFlashcardsHint": "Usa la función de Resumen con IA en una nota para generar tarjetas.",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "showQuestion": "Mostrar Pregunta",
+    "showAnswer": "Mostrar Respuesta"
+  },
+  "blockOverview": {
+    "deleteNote": "Eliminar Nota",
+    "noNotes": "Este bloque está vacío.",
+    "noNotesHint": "Añade tu primera nota a este bloque para empezar.",
+    "addFirstNote": "Añadir Primera Nota",
+    "addNewNote": "Nueva Nota",
+    "showNotesOnly": "Mostrar solo Notas",
+    "showBoth": "Mostrar Vista Dividida",
+    "showGraphOnly": "Mostrar solo Gráfico"
+  },
+  "contextMenu": {
+    "addSubnote": "Añadir Sub-nota",
+    "deleteNote": "Eliminar Nota",
+    "confirmDeleteNote": "¿Estás seguro de que quieres eliminar esta nota y todas sus sub-notas? Esta acción no se puede deshacer.",
+    "addNoteToBlock": "Añadir Nota al Bloque",
+    "deleteBlock": "Eliminar Bloque",
+    "confirmDeleteBlock": "¿Estás seguro de que quieres eliminar este bloque completo y todas las notas que contiene? Esta acción no se puede deshacer.",
+    "addBlock": "Añadir Bloque"
+  },
+  "modals": {
+    "summaryTitle": "Resumen Generado por IA",
+    "summaryGenerating": "Generando resumen, por favor espera...",
+    "summaryHeader": "Resumen",
+    "keyPointsHeader": "Puntos Clave",
+    "flashcardsHeader": "Tarjetas Sugeridas",
+    "flashcardFront": "Anverso",
+    "flashcardBack": "Reverso",
+    "addFlashcard": "Añadir",
+    "generateAITitle": "Generar Contenido con IA",
+    "generateTopicLabel": "Tema / Título",
+    "generatePromptLabel": "Instrucciones / Prompt (opcional)",
+    "generatePromptPlaceholder": "Ej: Explica esto en términos simples, crea una lista de viñetas...",
+    "generateModeLabel": "Modo de Generación",
+    "generateModeReplace": "Reemplazar nota completa",
+    "generateModeInsert": "Insertar en el cursor",
+    "generateButton": "Generar",
+    "createBlockTitle": "Crear Nuevo Bloque",
+    "blockTitlePlaceholder": "Introduce el título del bloque...",
+    "create": "Crear",
+    "cancel": "Cancelar",
+    "submit": "Enviar"
+  },
+  "settings": {
+    "title": "Configuración",
+    "theme": "Tema",
+    "language": "Idioma",
+    "english": "English",
+    "spanish": "Español",
+    "font": "Fuente",
+    "sans": "Sans-serif",
+    "serif": "Serif",
+    "mono": "Monoespaciada",
+    "dataLocation": "Los datos se guardan en:",
+    "dataLocationValue": "Almacenamiento Local del Navegador"
+  },
+  "directoryPicker": {
+    "title": "Selecciona una Carpeta para tus Datos",
+    "description": "Como aplicación de escritorio, CogniFlow puede guardar tus notas directamente en una carpeta de tu ordenador. Tus datos se mantienen privados y nunca se suben a internet.",
+    "button": "Seleccionar Carpeta",
+    "privacy": "Esta aplicación no tiene acceso a ninguna otra carpeta de tu ordenador."
+  }
+}
