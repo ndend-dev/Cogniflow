@@ -1,86 +1,176 @@
+
 # 🧠 CogniFlow
 
-**CogniFlow** es una aplicación web moderna y minimalista para la **organización del conocimiento**, inspirada en Logseq y Obsidian.  
-Permite crear **bloques temáticos**, **notas enlazadas**, **mapas mentales interactivos** y **tarjetas de memorización**, con la ayuda de **IA (Gemini)** para resumir y conectar ideas de forma inteligente.
+**CogniFlow** is a modern and minimalist application for **knowledge organization**, inspired by Logseq and Obsidian.  
+It allows you to create **thematic blocks**, **linked notes**, **interactive mind maps**, and **flashcards**, with the help of **AI (Gemini)** to intelligently summarize and connect ideas.
 
 ---
 
-## ☕ Apóyame en mi café ☕
+## ☕ Support My Coffee ☕
 
-Si **CogniFlow** te gusta o te resulta útil, puedes invitarme un café para seguir desarrollando nuevas funciones 💙
+If you like **CogniFlow** or find it useful, you can invite me for a coffee to help continue developing new features 💙
 
 👉 [**Buy Me a Coffee**](https://www.buymeacoffee.com/aesirsoft)
 
 ---
 
-## ✨ Características principales
+## ✨ Main Features
 
-- 🧩 **Bloques temáticos**: agrupa tus ideas por áreas de conocimiento.  
-- 🗒️ **Notas enlazadas**: relaciona conceptos fácilmente, como un cerebro digital.  
-- 🧠 **Resúmenes con IA (Gemini)**: genera resúmenes automáticos de tus notas.  
-- 🌐 **Visor de grafos**: visualiza tus ideas como una red de conexiones.  
-- 🃏 **Tarjetas de memorización**: refuerza el aprendizaje con recordatorios activos.  
-- 🎨 **Temas visuales personalizables**:
-  - **Matrix** – Verde neón sobre negro.  
-  - **Aurora** – Degradado violeta y azul.  
-  - **Minimal Light** – Azul sobre blanco.  
-  - **Solarized** – Azul petróleo sobre beige.  
+- 🧩 **Thematic Blocks** — Organize your ideas by knowledge areas.  
+- 🗒️ **Linked Notes** — Connect concepts easily, like a digital brain.  
+- 🧠 **AI Summaries (Gemini)** — Automatically summarize your notes.  
+- 🌐 **Graph Viewer** — Visualize your ideas as a network of connections.  
+- 🃏 **Flashcards** — Strengthen learning with active recall.  
+- 🎨 **Customizable Visual Themes**:
+  - **Matrix** — Neon green on black.  
+  - **Aurora** — Violet and blue gradient.  
+  - **Minimal Light** — Blue on white.  
+  - **Solarized** — Teal blue on beige.  
 
 ---
 
-## ⚙️ Instalación
+## ⚙️ Installation (local)
 
-Sigue estos pasos para instalar **CogniFlow** en tu entorno local:
+Follow these steps to run **CogniFlow** locally.
 
-### 1️⃣ Clona el repositorio
+### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/tuusuario/cogniflow.git
+git clone https://github.com/yourusername/cogniflow.git
 cd cogniflow
 ````
 
-### 2️⃣ Instala las dependencias
+### 2️⃣ Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Crea el archivo de entorno `.env.local`
+### 3️⃣ Create the `.env.local` file
 
-Crea un archivo llamado `.env.local` en la raíz del proyecto y agrega tu clave de API de **Gemini**:
+In the project root create `.env.local` and add your Gemini key:
 
 ```env
 GEMINI_API_KEY=PLACEHOLDER_API_KEY
 ```
 
-Reemplaza `PLACEHOLDER_API_KEY` con tu clave real obtenida desde [Google AI Studio](https://makersuite.google.com/app/apikey).
+Replace `PLACEHOLDER_API_KEY` with your actual key from Google AI Studio.
 
-### 4️⃣ Ejecuta la aplicación en modo desarrollo
+### 4️⃣ Run development server (frontend only)
 
 ```bash
 npm run dev
 ```
 
-Luego abre el navegador y visita:
-
-👉 [http://localhost:5173](http://localhost:5173)
+Open: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🧠 Estructura del proyecto
+## 💻 Desktop build with Tauri (create .exe)
+
+This project includes a `src-tauri/` folder. To produce a Windows executable (`.exe`) or other OS bundles, follow these steps.
+
+### Prerequisites
+
+* Node.js and npm installed.
+* Rust toolchain (includes `cargo`) installed and available in PATH.
+
+  * Install via [https://rustup.rs](https://rustup.rs) or `winget install --id Rustlang.Rustup` on Windows.
+* Tauri CLI installed in the project:
+
+```bash
+npm install --save-dev @tauri-apps/cli
+```
+
+### Build steps (recommended)
+
+1. Build the frontend (Vite) to produce `dist/`:
+
+```bash
+npm run build
+```
+
+2. Ensure `src-tauri/tauri.conf.json` is configured to point to `../dist`:
+
+```json
+"build": {
+  "beforeBuildCommand": "npm run build",
+  "beforeDevCommand": "npm run dev",
+  "frontendDist": "../dist",
+  "devPath": "http://localhost:5173"
+}
+```
+
+3. Build the native app with Tauri:
+
+```bash
+npx tauri build
+```
+
+or with an npm script (add to `package.json`):
+
+```json
+"scripts": {
+  "tauri:build": "tauri build",
+  "tauri:dev": "tauri dev"
+}
+```
+
+then run:
+
+```bash
+npm run tauri:build
+```
+
+### Result / Output
+
+After a successful build, packaged files and installers are created under:
+
+```
+src-tauri/target/release/bundle/
+```
+
+Example Windows installer/executable paths:
+
+* `src-tauri/target/release/bundle/msi/YourApp_1.0.0_x64.msi`
+* `src-tauri/target/release/bundle/nsis/YourApp_1.0.0.exe`
+* Also, you'll have the raw binary at `src-tauri/target/release/your-app-name.exe`
+
+> If you configured NSIS as a target, expect an `.exe` installer under the `nsis` folder.
+
+#### Notes
+
+* If Tauri complains it cannot find the frontend, ensure `dist/` exists and `frontendDist` in `tauri.conf.json` points to `../dist`.
+* For development (hot reload in desktop window), use:
+
+```bash
+npm run tauri:dev
+# or
+npx tauri dev
+```
+
+This runs your Vite dev server and opens the Tauri window loading `http://localhost:5173`.
+
+---
+
+## 🧠 Project structure (as in your workspace)
 
 ```
 cogniflow/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── hooks/
-│   ├── styles/
-│   ├── utils/
-│   └── main.tsx
-├── public/
+├── components/
+├── dist/                # built frontend (Vite) -> used by Tauri build
+├── hooks/
+├── locales/
+├── node_modules/
+├── services/
+├── src-tauri/           # Tauri config & Rust bundle
+│   ├── tauri.conf.json
+│   └── icons/
+├── utils/
 ├── .env.local
+├── App.tsx
+├── index.html
+├── index.tsx
 ├── vite.config.ts
 ├── package.json
 └── README.md
@@ -88,19 +178,31 @@ cogniflow/
 
 ---
 
+## 🔧 Quick `package.json` snippets
 
+Add these scripts to your `package.json` for convenience:
 
-## 📜 Licencia
-
-Este proyecto está bajo la licencia **MIT**.
-Eres libre de usarlo, modificarlo y compartirlo, siempre que se mantenga la atribución correspondiente.
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "tauri:dev": "tauri dev",
+  "tauri:build": "tauri build"
+}
+```
 
 ---
 
+## 📜 License
 
-### 🚀 Conecta tu mente. Fluye con el conocimiento.
+This project is licensed under the **MIT License**. You are free to use, modify, and share it as long as proper attribution is maintained.
 
-**CogniFlow — tu espacio digital para pensar mejor.**
+---
 
-```
+### 🚀 Connect your mind. Flow with knowledge.
+
+**CogniFlow — your digital space to think better.**
+
+
 
