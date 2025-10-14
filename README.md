@@ -1,16 +1,15 @@
+# 🧠 CogniFlow
+
+**CogniFlow** es una aplicación web moderna y minimalista para la **organización del conocimiento**, inspirada en Logseq y Obsidian.  
+Permite crear **bloques temáticos**, **notas enlazadas**, **mapas mentales interactivos** y **tarjetas de memorización**, con la ayuda de **IA (Gemini)** para resumir y conectar ideas de forma inteligente.
+
+---
 
 ## ☕ Apóyame en mi café ☕
 
 Si **CogniFlow** te gusta o te resulta útil, puedes invitarme un café para seguir desarrollando nuevas funciones 💙
 
 👉 [**Buy Me a Coffee**](https://www.buymeacoffee.com/aesirsoft)
-
----
-
-# 🧠 CogniFlow
-
-**CogniFlow** es una aplicación web moderna y minimalista para la **organización del conocimiento**, inspirada en Logseq y Obsidian.  
-Permite crear **bloques temáticos**, **notas enlazadas**, **mapas mentales interactivos** y **tarjetas de memorización**, con la ayuda de **IA (Gemini)** para resumir y conectar ideas de forma inteligente.
 
 ---
 
