@@ -1,7 +1,3 @@
-Perfecto 😄☕ Aquí tienes un **README.md** completo y profesional para tu proyecto **CogniFlow**, incluyendo la explicación de instalación con React + Vite, configuración de la clave de Gemini API, y una sección para donaciones vía **Buy Me a Coffee**:
-
----
-
 ## ☕ Apóyame en mi café ☕
 
 Si **CogniFlow** te gusta o te resulta útil, puedes invitarme un café para seguir desarrollando nuevas funciones 💙
